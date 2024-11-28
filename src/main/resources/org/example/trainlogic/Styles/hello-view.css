@@ -1,0 +1,91 @@
+.m-plus-rounded-1c-regular {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mplus';
+    src: url('../items/M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf');
+    font-weight: normal;
+    -fx-font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mplus';
+    src: url('../items/M_PLUS_Rounded_1c/MPLUSRounded1c-Bold.ttf');
+    font-weight: bold;
+    -fx-font-style: bold;
+}
+
+.text-color{
+    color: #4B535A;
+}
+.vbox{
+    -fx-background-color: #FCFCF2;
+}
+
+.text-style{
+    -fx-font-family: "Georgia Pro Semibold";
+    -fx-text-fill: #4B535A;
+    -fx-font-size: 50px;
+}
+
+.text-field-style{
+    -fx-font-family: "Georgia Pro Semibold";
+    -fx-font-size: 20px;
+    -fx-background-color: #fff;
+    -fx-background-radius: 7px;
+    -fx-border-color: #A3A5A4;
+    -fx-border-radius: 7px;
+}
+
+.text-field-error-style{
+    -fx-font-family: "Georgia Pro Semibold";
+    -fx-font-size: 20px;
+    -fx-background-color: #fff;
+    -fx-background-radius: 7px;
+    -fx-border-color: #804949;
+    -fx-border-radius: 7px;
+}
+
+.text {
+    -fx-font-family: "Georgia Pro Semibold";
+    -fx-font-size: 20px;
+}
+
+.button {
+    -fx-background-color: #FCFCF2;
+    -fx-text-fill: #4B535A;
+    -fx-border-color: #4B535A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.button-style {
+    -fx-background-color: #6e5656;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #4B535A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.button-style:hover{
+    -fx-background-color: #4B535A;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+}
+
+.button:hover{
+    -fx-background-color: #4B535A;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+}
+
+.check-box {
+    -fx-text-fill:  #4B535A;
+}
+
+
+
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" stylesheets="@../Styles/hello-view.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.trainlogic.HelloController">
+   <children>
+      <VBox fx:id="StartPage" alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text id="StartPageTitle" fill="#4b535a" styleClass="text-style" text="TrainLogic">
+               <VBox.margin>
+                  <Insets bottom="30.0" top="10.0" />
+               </VBox.margin>
+             </Text>
+            <Button fx:id="StartPageSignInButton" prefHeight="34.0" prefWidth="234.0" text="Войти">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="StartPageSignUpButton" prefHeight="34.0" prefWidth="230.0" text="Зарегистрироваться">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="SignIn" alignment="CENTER" prefHeight="600.0" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="SignInPageTitle" fill="#4b535a" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-style" text="Авторизация" />
+            <TextField fx:id="SignInTextFieldUSerName" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="782.0" promptText="Login" styleClass="text-field-style" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="250.0" right="250.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="SignInTextFieldPassword" prefHeight="0.0" prefWidth="0.0" promptText="Password" styleClass="text-field-style" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="250.0" right="250.0" top="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="SignInSignInButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="170.0" text="Войти">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="20" left="30.0" right="30.0" top="20" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="SignInSignUpButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="170.0" styleClass="button-style" text="Регистрация">
+                     <HBox.margin>
+                        <Insets bottom="20" left="30.0" right="30.0" top="20" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Text fx:id="SignInSignUpSeccesText" fill="#00ff51" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация прошла успещно!" textAlignment="CENTER" visible="false" wrappingWidth="565.4222106933594">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox fx:id="SignUp" alignment="CENTER" prefHeight="600.0" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="SignUpTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-style" text="Регистрация">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <fill>
+                  <RadialGradient centerX="0.5044247534422748" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.29411765933036804" green="0.32549020648002625" blue="0.3490196168422699" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.2526315748691559" green="0.27105262875556946" blue="0.28421053290367126" opacity="0.7799999713897705" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Text>
+            <TextField fx:id="SignUpTextFieldUserName" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="230.0" promptText="User Name" styleClass="text-field-style">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="250.0" right="250.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="SignUpTextFieldPassword" alignment="TOP_LEFT" depthTest="ENABLE" prefHeight="25.0" prefWidth="230.0" promptText="Password" styleClass="text-field-style">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="250.0" right="250.0" top="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <CheckBox fx:id="SignUpCheckBoxUserGroup" mnemonicParsing="true" text="root">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="275.0" top="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <HBox fx:id="S" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="SignUpSignUpButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="170.0" text="Регистрация">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="20" left="30.0" right="30.0" top="20" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="SignUpSignInButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="170.0" styleClass="button-style" text="Войти">
+                     <HBox.margin>
+                        <Insets bottom="20" left="30.0" right="30.0" top="20" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Text fx:id="SignInSignInErrorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Пользователь с таким именем уже существует!" textAlignment="CENTER" visible="false" wrappingWidth="565.4222106933594">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

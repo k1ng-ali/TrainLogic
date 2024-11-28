@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="MainAnchPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@../Styles/HomePageStyle.css" type="AnchorPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.trainlogic.HomePageController">
+   <children>
+      <TabPane fx:id="MainTab" layoutY="21.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+        <tabs>
+          <Tab fx:id="PlatformList" text="Платформы">
+            <content>
+              <AnchorPane fx:id="PlatformListPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="PlatformTable" layoutX="14.0" layoutY="27.0" prefHeight="200.0" prefWidth="883.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="PlatformSave" layoutX="821.0" layoutY="525.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Сохранить в файл" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="5.0" />
+                        <Button fx:id="PlatformLoad" layoutX="737.0" layoutY="525.0" mnemonicParsing="false" text="Загрузить из файла" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="175.0" />
+                        <Text fx:id="PlatformText" layoutX="120.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="314.9367370605469" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="130.0" />
+                        <Button fx:id="UpdateDatasPlatform" layoutX="747.0" layoutY="535.0" mnemonicParsing="false" text="Обновить данные" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="325.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="StorageList" text="Склады">
+            <content>
+              <AnchorPane fx:id="StorageListPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="StorageTable" layoutY="30.0" prefHeight="200.0" prefWidth="883.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="StorageSave" layoutY="30.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Сохранить в файл" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="5.0" />
+                        <Button fx:id="StorageLoad" layoutY="30.0" mnemonicParsing="false" text="Загрузить из файла" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="175.0" />
+                         <Text fx:id="StorageText" layoutX="120.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="314.9367370605469" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="130.0" />
+                        <Button fx:id="UpdateDatasStorage" layoutX="757.0" layoutY="545.0" mnemonicParsing="false" text="Обновить данные" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="325.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="Add" text="Добавить">
+              <content>
+                <AnchorPane fx:id="AddPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="AddTab" layoutX="40.0" layoutY="-7.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <tabs>
+                            <Tab fx:id="PlatformAddTab" text="Платформа">
+                              <content>
+                                <AnchorPane fx:id="PlatformAddPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="PlatformAddBox" alignment="TOP_CENTER" layoutX="328.0" layoutY="114.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ChoiceBox fx:id="PlatformAddType" prefWidth="150.0">
+                                                   
+                                                   <opaqueInsets>
+
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="40.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor>
+                                                </ChoiceBox>
+                                                <ChoiceBox fx:id="PlatformAddTypeCargo" disable="true" prefWidth="150.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor>
+                                                </ChoiceBox>
+                                                <TextField fx:id="PlatformAddNum" disable="true" promptText="Номер платформы" styleClass="text-field-style">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="PlatformAddMass" disable="true" focusTraversable="false" promptText="Масса груза в платформе" styleClass="text-field-style">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="PlatformAddMaxMass" disable="true" focusTraversable="false" promptText="Грузаподъемность" styleClass="text-field-style">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <Button fx:id="PlatformAddButton" disable="true" layoutX="824.0" layoutY="476.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Добавить" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
+                                          <Text fx:id="PlatformAddText" layoutX="130.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="314.9367370605469" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="130.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Склад">
+                              <content>
+                                <AnchorPane fx:id="StorageAddPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="StorageAddBox" alignment="TOP_CENTER" layoutX="99.0" layoutY="132.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ChoiceBox fx:id="StorageAddType" prefWidth="150.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="40.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor>
+                                                </ChoiceBox>
+                                                <ChoiceBox fx:id="StorageAddTypeCargo" disable="true" prefWidth="150.0" />
+                                                <TextField fx:id="StorageAddNum" disable="true" promptText="Номер склада" styleClass="text-field-style">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="StorageAddMass" disable="true" focusTraversable="false" promptText="Масса груза на складе" styleClass="text-field-style">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="StorageAddMAxMass" disable="true" focusTraversable="false" promptText="Вместимость" styleClass="text-field-style">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <Button fx:id="StorageAddButton" disable="true" layoutX="733.0" layoutY="472.0" mnemonicParsing="false" prefWidth="150.0" text="Добавить" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
+                                          <Text fx:id="StorageAddText" layoutX="140.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="314.9367370605469" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="130.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="AvtomobileAdd" text="Добавить Автомобиль">
+              <content>
+                <AnchorPane fx:id="AvtomobileAddPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="AvtomobileAddBox" alignment="TOP_CENTER" layoutX="372.0" layoutY="114.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ChoiceBox fx:id="AvtomobileAddChoiceStorage" prefWidth="150.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="40.0" />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                              <TextField fx:id="AvtomobileAddModel" promptText="Марка" styleClass="text-field-style">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="AvtomobileAddMass" promptText="Масса" styleClass="text-field-style">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="AvtomobileAddCount" promptText="Количество" styleClass="text-field-style">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="300.0" right="300.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <Button fx:id="AvtomobileAddButtom" layoutX="778.0" layoutY="512.0" mnemonicParsing="false" prefWidth="150.0" text="Добавить" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="LoadUnloadTab" text="Загрузка/Разгрузка">
+              <content>
+                <AnchorPane fx:id="LoadUnloadPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="LoadUnloadTabPane" layoutX="265.0" layoutY="146.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <tabs>
+                            <Tab fx:id="LoadTab" text="Загрузка платформы">
+                              <content>
+                                <AnchorPane fx:id="LoadPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="LoadVBox" alignment="TOP_CENTER" layoutX="304.0" layoutY="140.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox fx:id="LoadHBox" alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ChoiceBox fx:id="LoadChoiceStorage" prefWidth="150.0" />
+                                                      <Text fx:id="LoadTextChoice" strokeType="OUTSIDE" strokeWidth="0.0" text="---&gt;">
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" right="20.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <ChoiceBox fx:id="LoadChoicePlatform" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                                <TextField fx:id="LoadMassCargo" styleClass="text-field-style">
+                                                   <VBox.margin>
+                                                      <Insets left="300.0" right="300.0" top="30.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Button fx:id="LoadButtom" mnemonicParsing="false" prefHeight="40.0" prefWidth="307.0" text="Button">
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="UnloadTab" text="Разгрузка платформа">
+                              <content>
+                                <AnchorPane fx:id="UnloadPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="UnloadVBox" alignment="TOP_CENTER" layoutX="46.0" layoutY="130.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox fx:id="UnloadHBox" alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ChoiceBox fx:id="UnloadChoicePlatform" prefWidth="150.0" />
+                                                      <Text fx:id="UnloadTextChoice" strokeType="OUTSIDE" strokeWidth="0.0" text="---&gt;">
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" right="20.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <ChoiceBox fx:id="UnloadChoiceStorage" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                                <TextField fx:id="UnloadMassCargo" styleClass="text-field-style">
+                                                   <VBox.margin>
+                                                      <Insets left="300.0" right="300.0" top="30.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Button fx:id="UnloadButtom" mnemonicParsing="false" prefHeight="40.0" prefWidth="307.0" text="Button">
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="AdminSettings" disable="true" text="Настройки Админа">
+              <content>
+                <AnchorPane fx:id="AdminSettingsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="AdminSettingsVBox" alignment="CENTER" layoutX="375.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <CheckBox fx:id="AdminSettingsLogMode" mnemonicParsing="false" text="Логирование">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="AdminSettingsAutotestMode" mnemonicParsing="false" text="Автотесты">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <Button fx:id="AdminSettingsSaveButtom" mnemonicParsing="false" prefHeight="27.0" prefWidth="145.0" text="Сохранить">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</fx:root>
