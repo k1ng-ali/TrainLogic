@@ -1,0 +1,47 @@
+
+.text-field-style{
+    -fx-font-family: "Georgia Pro Semibold";
+    -fx-font-size: 20px;
+    -fx-background-color: #fff;
+    -fx-background-radius: 7px;
+    -fx-border-color: #A3A5A4;
+    -fx-border-radius: 7px;
+}
+
+.text-field-error-style{
+    -fx-font-family: "Georgia Pro Semibold";
+    -fx-font-size: 20px;
+    -fx-background-color: #fff;
+    -fx-background-radius: 7px;
+    -fx-border-color: #804949;
+    -fx-border-radius: 7px;
+}
+
+.button {
+    -fx-background-color: #FCFCF2;
+    -fx-text-fill: #4B535A;
+    -fx-border-color: #4B535A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.button-style {
+    -fx-background-color: #6e5656;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #4B535A;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.button-style:hover{
+    -fx-background-color: #4B535A;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+}
+
+.button:hover{
+    -fx-background-color: #4B535A;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+}
